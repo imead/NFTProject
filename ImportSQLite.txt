@@ -1,15 +1,19 @@
-# Found these data from Data is Plural a while back and thought it seemed interesting.
-# I understand the concept of a SQLite database but have not had to work with them before.
-# Serverless, compact file that needs to be unpacked, I think this one has multiple
-# tables within.
 
-# Download Package SQLite  
-#  pkg add SQLite
+Pkg.add("MySQL")
 
-# Store path to SQLLite database nfts.sqlite
 
+# Download Package SQLite using Pkg, also updating.
+using Pkg
+Pkg.add("SQLite")
+Pkg.update("SQLite")
+
+# Initialize SQLite and check
+using SQLite
 
 # Import SQLLite database
+dbpath = raw"C:\Users\ivylm\Documents\NFT\nfts.sqlite"     #@raw_str macro required because of how Julia parses backslashes
+NFTDB = SQLite.DB(dbpath)
+# Cannot get the above to work, must troubleshoot that later
+NFTDB = SQLite.DB(raw"C:\Users\ivylm\Documents\NFT\nfts.sqlite")
 
-
-
+SQLite.tables(NFTDB)
