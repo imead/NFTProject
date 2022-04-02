@@ -1,0 +1,15 @@
+# Found these data from Data is Plural a while back and thought it seemed interesting.
+# I understand the concept of a SQLite database but have not had to work with them before.
+# Serverless, compact file that needs to be unpacked, I think this one has multiple
+# tables within.
+
+# Download Package SQLite  
+#  pkg add SQLite
+
+# Store path to SQLLite database nfts.sqlite
+
+
+# Import SQLLite database
+
+
+
