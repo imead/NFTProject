@@ -61,3 +61,8 @@ LIMIT 50;
 SELECT *
 FROM transfer_statistics_by_address
 LIMIT 50;
+
+-- Finding length of string in transfer_statistics_by_address
+SELECT LENGTH(address) FROM transfer_statistics_by_address;
+
+
